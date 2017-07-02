@@ -1,0 +1,70 @@
+{
+  "name": "kdovi-web",
+  "version": "1.0.0",
+  "description": "> questions from users",
+  "main": "web/server.js",
+  "scripts": {
+    "start": "node web/server.js",
+    "nodemon": "nodemon web/server.js",
+    "migrate": "sequelize db:migrate --migrations-path models/migrations/ --config configs/migrations.js --env",
+    "doc": "BASE_DIR=$PWD; cd web/router/api/admin/apidoc && apidoc -i $BASE_DIR/libs -i ../ -o $BASE_DIR/web/public/docs/api/admin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artmadiar/kdovi.git"
+  },
+  "author": "Azamat <artmadiar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Artmadiar/kdovi/issues"
+  },
+  "eslintConfig": {
+    "ecmaVersion": 6,
+    "extends": "airbnb-base",
+    "rules": {
+      "comma-dangle": 0,
+      "consistent-return": 0,
+      "no-param-reassign": 0,
+      "no-underscore-dangle": 0,
+      "no-shadow": 0,
+      "no-console": 0,
+      "no-plusplus": 0
+    }
+  },
+  "homepage": "https://github.com/Artmadiar/kdovi#readme",
+  "dependencies": {
+    "bcrypt": "1.0.2",
+    "bluebird": "3.5.0",
+    "body-parser": "1.17.2",
+    "child_process": "1.0.2",
+    "compression": "1.6.2",
+    "connect-redis": "3.3.0",
+    "cookie-parser": "1.4.3",
+    "crypto": "0.0.3",
+    "dotenv": "4.0.0",
+    "express": "4.15.3",
+    "express-flash": "0.0.2",
+    "express-session": "1.15.3",
+    "express-validator": "3.2.0",
+    "fs": "0.0.1-security",
+    "handlebars": "4.0.10",
+    "lodash": "4.17.4",
+    "moment": "2.18.1",
+    "morgan": "1.8.2",
+    "node-sass-middleware": "0.11.0",
+    "nodemailer": "4.0.1",
+    "nodemailer-ses-transport": "1.5.1",
+    "passport": "0.3.2",
+    "passport-http-bearer": "1.0.1",
+    "passport-local": "1.0.0",
+    "path": "0.12.7",
+    "pg": "6.4.0",
+    "pug": "2.0.0-rc.2",
+    "redis": "2.7.1",
+    "request": "2.81.0",
+    "sequelize": "4.2.0",
+    "socket.io": "2.0.3",
+    "uuid": "3.1.0",
+    "xtend": "4.0.1"
+  }
+}

@@ -1,0 +1,49 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dirs
+lib-cov
+tmp
+
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Project
+tmp/*
+logs/*
+history/*
+bash/config.sh
+bash/history
+web/public/apidoc/*
+.history/*
+
+# Configs
+.env*
+
+# Editors
+.idea
+.vscode
+*.iml
+
+# Generated apidoc
+web/public/docs/*
+
+# Generated contracts
+libs/ContractGenerator/contracts/*
+
+# Redis
+dump.rdb

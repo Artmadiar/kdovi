@@ -1,0 +1,10 @@
+// Поместите параметры в этот файл, чтобы перезаписать параметры по умолчанию.
+{
+    "editor.tabSize": 2,
+    "files.eol": "\n",
+    "git.confirmSync": true,
+    "window.showFullPath": true,
+    "editor.stablePeek": true,
+    "window.openFilesInNewWindow": "on",
+    "eslint.autoFixOnSave": false
+  }

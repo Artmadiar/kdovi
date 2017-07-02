@@ -1,0 +1,16 @@
+{
+  "name": "Admin API Reference",
+  "title": "Backoffice API",
+  "description": "",
+  "version": "0.0.1",
+  "url" : "/api/backoffice",
+  "header": {
+    "title": "Reference",
+    "filename": "reference.md"
+  },
+  "template": {
+  	"withCompare": false,
+  	"withGenerator": true
+  },
+  "template.forceLanguage": "en"
+}

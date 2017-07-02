@@ -1,0 +1,36 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container-fluid
+    .navbar-header
+      button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+        span(class="sr-only") Toggle navigation
+        span(class="icon-bar")
+        span(class="icon-bar")
+        span(class="icon-bar")
+
+      a.navbar-brand(href='/' + company + '/backoffice')
+        i.fa.fa-cube
+        | #{company.toUpperCase()} | Back Office
+
+
+    ul.nav.navbar-nav.navbar-right.navbar-collapse.collapse#navbar
+      if !user
+      else
+        li.dropDown
+          a.dropdown-toggle(href="#" data-toggle="dropdown") Regions
+          ul.dropdown-menu
+            each region in regions
+              li
+                a(href='/' + company + '/backoffice/regions/' + region.id)=region.name
+        li.dropDown
+          a.dropdown-toggle(href="#" data-toggle="dropdown") Cloud
+          ul.dropdown-menu
+            li.dropdown-header
+              | All regions
+            li
+              a(href='/' + company + '/backoffice/cloud/cleanup') Cleanup
+            li
+              a(href='/' + company + '/backoffice/cloud/log') Sync log (online)
+            li
+              a(href='/' + company + '/backoffice/languages') Languages
+        li
+          a(href='/' + company + '/backoffice/logout') Logout
