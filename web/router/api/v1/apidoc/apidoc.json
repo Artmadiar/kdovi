@@ -1,9 +1,8 @@
 {
-  "name": "Admin API Reference",
-  "title": "Backoffice API",
-  "description": "",
+  "name": "API Reference",
+  "title": "API Reference",
   "version": "0.0.1",
-  "url" : "/api/backoffice",
+  "sampleUrl" : "http://localhost:8080/api/v1",
   "header": {
     "title": "Reference",
     "filename": "reference.md"

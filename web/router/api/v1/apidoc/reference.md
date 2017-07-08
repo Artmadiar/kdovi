@@ -2,7 +2,7 @@ This reference describes how to use provided API. Bellow are listed shared conve
 
 ## Endpoint and URLs
 
-The endpoint address correspond to the base of current URL. To form the complete API URL path use prefix pattern `http://$ENDPOINT/$COMPANY/`.
+The endpoint address correspond to the base of current URL. To form the complete API URL path use prefix pattern `http://$ENDPOINT/`.
 
 ## Schema
 

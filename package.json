@@ -7,7 +7,7 @@
     "start": "node web/server.js",
     "nodemon": "nodemon web/server.js",
     "migrate": "sequelize db:migrate --migrations-path models/migrations/ --config configs/migrations.js --env",
-    "doc": "BASE_DIR=$PWD; cd web/router/api/admin/apidoc && apidoc -i $BASE_DIR/libs -i ../ -o $BASE_DIR/web/public/docs/api/admin"
+    "makedocs": "BASE_DIR=$PWD; cd web/router/api/v1/apidoc; apidoc -i $BASE_DIR/libs -i ../ -o $BASE_DIR/web/public/docs/api/v1"
   },
   "repository": {
     "type": "git",

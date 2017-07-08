@@ -1,16 +1,18 @@
 const bcrypt = require('bcrypt');
 
-function verifyPassword(password) {
+// hooks
+
+function beforeCreate(user) {
   return Promise.resolve()
-  .then(() => bcrypt.compare(password, this.password))
-  .then((isCorrect) => {
-    if (isCorrect) return this;
-    return false;
-  });
+    .then(() => bcrypt.genSalt(12))
+    .then(salt => bcrypt.hash(user.password, salt))
+    .then((encrypted) => {
+      user.password = encrypted;
+    });
 }
 
 module.exports = function (sequelize, DataTypes) {
-  return sequelize.define('user', {
+  const User = sequelize.define('user', {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -43,14 +45,29 @@ module.exports = function (sequelize, DataTypes) {
     },
     fb: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     }
   }, {
     tableName: 'user',
     timestamps: true,
     paranoid: true,
-    instanceMethods: {
-      verifyPassword
+
+    hooks: {
+      beforeCreate
     }
   });
+
+  // instanceMethods
+
+  User.prototype.verifyPassword = function (password) {
+    return Promise.resolve()
+    .then(() => bcrypt.compare(password, this.password))
+    .then((isCorrect) => {
+      if (isCorrect) return this;
+      return false;
+    });
+  };
+
+  // /////////
+  return User;
 };

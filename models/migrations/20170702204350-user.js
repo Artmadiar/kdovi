@@ -34,7 +34,11 @@ module.exports = {
     },
     fb: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: true
+    },
+    lastLoginDate: {
+      type: Sequelize.DATE,
+      allowNull: true
     },
     createdAt: {
       type: Sequelize.DATE,
